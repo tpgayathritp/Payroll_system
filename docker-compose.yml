@@ -12,6 +12,11 @@ services:
     depends_on:
       - db
     restart: always
+    volumes:
+      - ./output:/app/output
+      - ./payslips:/app/payslips
+      - ./logs:/app/logs
+
 
   db:
     image: postgres:15
