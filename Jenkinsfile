@@ -44,9 +44,10 @@ pipeline {
 
         stage('Deploy to Server') {
             steps {
-                bat "docker compose down"
-                bat "docker compose pull"
-                bat "docker compose up -d"
+               bat "docker compose down --remove-orphans"
+               bat "docker compose pull"
+               bat "docker compose up -d --force-recreate"
+
             }
         }
 
