@@ -1,0 +1,14 @@
+trigger: none   # No automatic triggers
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: Bash@3
+  displayName: "Trigger Payroll Run"
+  inputs:
+    targetType: inline
+    script: |
+      echo "Running payroll via API..."
+      curl -X POST http://localhost:8000/run-payroll/all \
+           -H "Content-Type: application/json"
