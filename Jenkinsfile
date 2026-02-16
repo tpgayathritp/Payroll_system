@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/tpgayathritp/python-payroll-system.git',
+                    url: 'https://github.com/tpgayathritp/Payroll_system.git',
                     credentialsId: 'github-creds'
             }
         }
