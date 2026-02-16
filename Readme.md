@@ -17,7 +17,7 @@ Key Features
 
    - REST API endpoints for payroll processing
    - Auto‑generated Swagger UI
-   - Clean, modular Python code
+   - Python code
    - PDF and CSV file generation
 
 2. Payroll Engine
@@ -42,21 +42,22 @@ Key Features
    - FastAPI container
    - PostgreSQL container
    - pgAdmin container
-   - Persistent volumes
-
+   
 5. Jenkins CI/CD Pipeline
    - Automated build
    - Automated deployment
    - Docker container orchestration
    - Success/failure reporting
 
+The CI/CD pipeline intentionally does not run payroll.  
+Payroll execution is a business operation and is triggered manually via API, not during deployment.
 
 Project Structure
 ------------------------------------
 
 Payroll_app_Docker/
  ── app/
-     ── api.py
+     ── api.py                   # FastAPI routes and endpoints
      ── payroll.py
      ── databasepostgre.py
      ── models.py
