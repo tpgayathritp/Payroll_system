@@ -52,11 +52,12 @@ pipeline {
         }
 
         stage('Health Check') {
-            steps {
-                bat "timeout /t 5"
-                bat "curl -f http://localhost:8000/docs"
-            }
-        }
+    steps {
+        powershell "Start-Sleep -Seconds 5"
+        bat "curl -f http://localhost:8000/docs"
+         }
+      }
+
     }
 
     post {
