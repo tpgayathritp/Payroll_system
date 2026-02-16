@@ -1,0 +1,4 @@
+2026-02-15 23:28:39,104 - INFO - Generated payslip PDF: /app/payslips/payslip_101.pdf
+2026-02-15 23:28:39,108 - INFO - Generated payslip PDF: /app/payslips/payslip_102.pdf
+2026-02-15 23:28:39,111 - INFO - Generated payslip PDF: /app/payslips/payslip_103.pdf
+2026-02-15 23:28:39,116 - INFO - Generated summary CSV: /app/output/payroll_summary_2026-02-15_23-28-39.csv

@@ -1,0 +1,4 @@
+Emp ID,Name,Base Salary,Hours,Rate,Multiplier,Allowances,Deductions,Overtime,Gross,Tax,Super,Net
+101,John Doe,5000.0,10.0,50.0,1.5,200.0,100.0,750.0,5950.0,0,565.25,5850.0
+102,Jane Smith,6000.0,5.0,60.0,2.0,300.0,150.0,600.0,6900.0,0,655.5,6750.0
+103,Michael Lee,44500.0,8.0,40.0,1.25,150.0,80.0,400.0,45050.0,5108.25,4279.75,39861.75
