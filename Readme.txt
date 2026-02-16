@@ -57,11 +57,11 @@ Project Structure
 Payroll_app_Docker/
  ── app/
      ── api.py
-     ── payroll_logic.py
-     ── database.py
+     ── payroll.py
+     ── databasepostgre.py
      ── models.py
-     ── utils/
-     ── output/ 
+     ── crud.py
+     ── output.py 
 
 
 ── Dockerfile
@@ -69,6 +69,27 @@ Payroll_app_Docker/
 ── requirements.txt
 ── Jenkinsfile
 ── README
+
+Running the Application (Docker)
+-------------------------------------
+
+Build and start containers
+   docker compose up -d --build
+
+Access the FastAPI documentation
+  http://127.0.0.1:8000/docs
+
+Access pgAdmin
+  http://127.0.0.1:5050
+
+
+API End Points
+------------------------------------
+
+Run Payroll for all employees
+Run Payroll for a single employee
+Download Payslip
+Download payroll summary(csv)
 
 
 
