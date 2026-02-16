@@ -8,6 +8,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Ensure static folder exists inside container
+RUN mkdir -p static
+
 EXPOSE 8000
 
 CMD ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000"]
