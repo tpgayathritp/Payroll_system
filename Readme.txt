@@ -1,107 +1,78 @@
-Payroll Processing System — FastAPI + PostgreSQL
-A complete, production‑style payroll processing system built with FastAPI, PostgreSQL, and Python, featuring payroll calculations, PDF payslip generation, CSV summary exports, and a simple web frontend for running and downloading payroll outputs.
+Payroll Processing System
+--------------------------------------
+FastAPI • Docker • PostgreSQL • Jenkins CI/CD
 
-Features
-  Payroll Engine
-      - Calculates:
-      - Base salary
-      - Hours × rate × multiplier
-      - Allowances
-      - Deductions
-      - Overtime
-      - Gross pay
-      - Tax
-      - Superannuation
-      - Net pay
-   Database Integration (PostgreSQL)
-      - Employee data stored in PostgreSQL
-      - SQLAlchemy ORM
-      - Clean CRUD structure
-   PDF Payslip Generation
-      - Automatically generates a PDF payslip for each employee
-      - Timestamped filenames
-      - Stored in /payslips/
-   CSV Summary Export
-      - Generates a full payroll summary CSV
-      - Includes all payroll components
-      - Stored in /output/
-   Download Endpoints
-      - /download-payslip/{emp_id} → Download latest payslip
-      - /download-summary → Download latest summary CSV
-   Simple Frontend UI
-      - Run payroll for all employees
-      - Download summary
-      - Download payslip by employee ID
-      - Served via FastAPI templates
+A complete, production‑style Payroll Processing System built using FastAPI, containerized with Docker, backed by PostgreSQL, and automated using a fully functional Jenkins CI/CD pipeline.
+This project demonstrates backend engineering, DevOps automation, and application design.
 
-Technical
+Project Overview
+-------------------------------------
+This system calculates payroll for employees, generates payslips (PDF), produces payroll summaries (CSV), and stores payroll history in a PostgreSQL database.
+The entire application runs inside Docker containers and is deployed automatically using Jenkins CI/CD.
 
+Key Features
+------------------------------------
+
+1. FastAPI 
+
+   - REST API endpoints for payroll processing
+   - Auto‑generated Swagger UI
+   - Clean, modular Python code
+   - PDF and CSV file generation
+
+2. Payroll Engine
+   Calculates:
+   - Basic salary
+   - Net salary
+   - Tax
+   - Super
+   - Overtime
+
+   Supports:
+   - Single employee payroll
+   - Full payroll run for all employees
+
+3. Database (PostgreSQL)
+   - Employee master table
+   - Payroll run history
+   - Payslips details
+   - Managed via pgAdmin
+
+4. Dockerized Architecture
+   - FastAPI container
+   - PostgreSQL container
+   - pgAdmin container
+   - Persistent volumes
+
+5. Jenkins CI/CD Pipeline
+   - Automated build
+   - Automated deployment
+   - Docker container orchestration
+   - Success/failure reporting
 
 
 Project Structure
+------------------------------------
 
-Payroll_app_postgreSQL/
-│
-├── api.py                 # FastAPI routes
-├── crud.py                # Database operations
-├── models.py              # SQLAlchemy models
-├── output.py              # PDF + CSV generation
-├── utils_output.py        # Helper functions
-│
-├── payslips/              # Generated PDF payslips
-├── output/                # Generated CSV summaries
-├── logs/                  # Payroll logs
-│
-├── templates/
-│     └── index.html       # Frontend UI
-│
-└── static/                # CSS/JS assets
+Payroll_app_Docker/
+ ── app/
+     ── api.py
+     ── payroll_logic.py
+     ── database.py
+     ── models.py
+     ── utils/
+     ── output/ 
 
 
-How to run this project
-
-  Install dependencies
-    pip install -r requirements.txt
-
-  Start PostgreSQL and create database
-    CREATE DATABASE payroll_db;
-
-  Run FastAPI server
-    uvicorn api:app --reload
-
-  Open the frontend
-    http://127.0.0.1:8000/
-
-API Endpoints
-   Run Payroll
-   POST /run-payroll/all
-  
-   Download Payslip
-   GET /download-payslip/{emp_id}
+── Dockerfile
+── docker-compose.yml
+── requirements.txt
+── Jenkinsfile
+── README
 
 
-   Download Summary CSV
-   GET /download-summary
-
-   Frontend UI
-   GET /
-
-Example Output Files
-    PDF Payslip
-    payslip_101.pdf
 
 
-    CSV Summary
-    payroll_summary_2026-02-13_11-25-10.csv
-
-    Log Files
-    payroll_2026-02-13_error.log
-    payroll_2026-02-13_info.log
 
 
-Future Enhancements
-- Add authentication 
-- Add employee management UI
-- Add Excel (.xlsx) export
-- Deploy to Azure App Service
-- Add CI/CD pipeline (GitHub Actions / Azure DevOps)
+
