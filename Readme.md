@@ -58,11 +58,11 @@ Project Structure
 Payroll_app_Docker/
  ── app/
      ── api.py                   # FastAPI routes and endpoints
-     ── payroll.py
-     ── databasepostgre.py
-     ── models.py
-     ── crud.py
-     ── output.py 
+     ── payroll.py               # Payroll engine
+     ── databasepostgre.py       # PostgreSQL connection and session management
+     ── models.py                # SQLAlchemy
+     ── crud.py                  # Database operations
+     ── output.py                # PDF/CSV generation/logs
 
 
 ── Dockerfile
