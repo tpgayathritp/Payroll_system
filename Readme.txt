@@ -92,6 +92,30 @@ Download Payslip
 Download payroll summary(csv)
 
 
+Jenkins CI/CD Pipelines
+-----------------------------------
+
+Build Stage
+- Pulls latest code from GitHub
+- Installs dependencies
+- Prepares environment
+
+Deployment Stage
+- Runs Docker containers
+- Deploys FastAPI backend
+- Verifies service health
+
+Post Deployment
+- Prints success message
+
+Pipeline Output
+  Finished: SUCCESS
+  Deployment successful!
+
+NOTE :
+The CI/CD pipeline does not run payroll automatically — this is intentional and follows industry best practices.
+Payroll is a business operation, not a deployment step.
+
 
 
 
