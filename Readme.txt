@@ -116,7 +116,26 @@ NOTE :
 The CI/CD pipeline does not run payroll automatically — this is intentional and follows industry best practices.
 Payroll is a business operation, not a deployment step.
 
+Project flow
+-----------------------------
 
+- Developer pushes code to GitHub
+- Jenkins pulls latest code
+- Jenkins builds and deploys Docker containers
+- FastAPI app becomes available at localhost:8000
+- User triggers payroll manually via API
+- System generates:
+- PDF payslips
+- CSV summary
+- Database entries
+- Log/error files
+
+Future Enhancements
+------------------------------
+
+- API key authentication
+- Scheduled payroll runs
+- Email notification
 
 
 
