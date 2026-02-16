@@ -43,13 +43,15 @@ pipeline {
         }
 
         stage('Deploy to Server') {
-            steps {
-               bat "docker compose down --remove-orphans"
-               bat "docker compose pull"
-               bat "docker compose up -d --force-recreate"
+    steps {
+        dir('D:\\Python\\Payroll_app_Docker') {
+            bat "docker compose down --remove-orphans"
+            bat "docker build -t payroll_api ."
+            bat "docker compose up -d --force-recreate"
+           }
+       }
+     }
 
-            }
-        }
 
         stage('Health Check') {
     steps {
