@@ -65,11 +65,12 @@ Payroll_app_Docker/
      ── output.py                # PDF/CSV generation/logs
 
 
-── Dockerfile
-── docker-compose.yml
-── requirements.txt
-── Jenkinsfile
-── README
+── Dockerfile                    # FastAPI Docker image
+── docker-compose.yml            # Orchestrates API, PostgreSQL, pgAdmin
+── requirements.txt              # Python dependencies
+── Jenkinsfile                   # CI/CD pipeline definition
+── README                        # Project documentation
+
 
 Running the Application (Docker)
 -------------------------------------
@@ -114,7 +115,7 @@ Pipeline Output
   Deployment successful!
 
 NOTE :
-The CI/CD pipeline does not run payroll automatically — this is intentional and follows industry best practices.
+The CI/CD pipeline does not run payroll automatically — this is intentional.
 Payroll is a business operation, not a deployment step.
 
 Project flow
@@ -137,6 +138,7 @@ Future Enhancements
 - API key authentication
 - Scheduled payroll runs
 - Email notification
+- Password protected payslips
 
 
 
