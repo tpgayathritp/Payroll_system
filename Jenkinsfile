@@ -8,11 +8,14 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/tpgayathritp/Payroll_system.git'
-            }
+     stage('Checkout') {
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/tpgayathritp/python-payroll-system.git',
+            credentialsId: 'github-creds'
         }
+      }
+
 
         stage('Build Docker Image') {
             steps {
