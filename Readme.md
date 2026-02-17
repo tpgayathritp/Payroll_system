@@ -1,6 +1,6 @@
 Payroll Processing System
 --------------------------------------
-FastAPI • Docker • PostgreSQL • Jenkins CI/CD
+FastAPI ,Docker ,PostgreSQL, Jenkins CI/CD
 
 A complete, production‑style Payroll Processing System built using FastAPI, containerized with Docker, backed by PostgreSQL, and automated using a fully functional Jenkins CI/CD pipeline.
 This project demonstrates backend engineering, DevOps automation, and application design.
@@ -131,6 +131,10 @@ Project flow
 - CSV summary
 - Database entries
 - Log/error files
+
+NOTE :Employee records are added manually through pgAdmin. 
+The system does not use a seed_employees script.
+
 
 Future Enhancements
 ------------------------------
