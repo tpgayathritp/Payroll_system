@@ -56,6 +56,7 @@ Project Structure
 ------------------------------------
 
 Payroll_app_Docker/
+
  ── app/
      ── api.py                   # FastAPI routes and endpoints
      ── payroll.py               # Payroll engine
